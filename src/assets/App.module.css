@@ -52,8 +52,14 @@ body{
 .container .rightside{
     flex: 1;
     margin-left: 40px;
+    display: flex;
 }
-.leftBlock{
-    display: block;
-    margin-bottom: 5px;
+.container .rightside .grid{
+    display: -ms-grid;
+    display: grid;
+    flex: 1;
+    gap:20px;
+    -ms-grid-columns: repeat(2, 1fr);
+    grid-template-columns:repeat(2, 1fr) ;
 }
+

@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import styles from './assets/App.module.css';
 import powedImage from './assets/powered.png'
+import { calculateImc, levels} from './assets/helpers/Imc'
+import { GridItem} from './Components/GridItem'
 
 function App() {
 
@@ -38,7 +40,11 @@ function App() {
           <button onClick={HandleCalc}>Calcular</button>
         </div>
         <div className={styles.rightside}>
-          ....
+          <div className={styles.grid}>
+            {levels.map((item, key)=>(
+              <GridItem  key={key} item={item}/>
+            ))}
+          </div>
         </div>
       </div>
 
